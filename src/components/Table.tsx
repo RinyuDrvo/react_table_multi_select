@@ -1,6 +1,6 @@
 import React from "react";
 import Company from "../models/Company";
-import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-table";
+import { ColumnDef, createColumnHelper, flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-table";
 
 /** 表に固定表示するデータ */
 const defaultCompanyData: Company[] = [
@@ -27,7 +27,7 @@ const defaultCompanyData: Company[] = [
 const columnHelper = createColumnHelper<Company>()
 
 /** カラム設定 */
-const columns = [
+const columns: ColumnDef<Company, any>[] = [
   columnHelper.accessor('corporateNumber', {
     cell: info => info.getValue()
   }),
