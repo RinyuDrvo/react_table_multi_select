@@ -1,6 +1,7 @@
 import React from "react";
 import Company from "../models/Company";
 import { ColumnDef, createColumnHelper, flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-table";
+import "./Table.css"
 
 /** 表に固定表示するデータ */
 const defaultCompanyData: Company[] = [
@@ -51,8 +52,8 @@ function Table() {
   })
 
   return (
-    <div className="table-container">
-      <table>
+    <div className="table__container">
+      <table className="table" border={1}>
         <thead>
           {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id}>
