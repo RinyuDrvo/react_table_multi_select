@@ -1,10 +1,10 @@
 import React from 'react';
-import Table from './components/Table';
+import Top from './pages/Top';
 
 function App() {
   return (
     <div className="component-app">
-      <Table />
+      <Top />
     </div>
   );
 }

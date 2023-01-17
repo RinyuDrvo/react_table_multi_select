@@ -8,6 +8,8 @@ type Company = {
   initialCapital: number,
   /** 設立年 */
   foundedIn: number
+  /** 再帰用 */
+  subRows?: Company[]
 }
 
 export default Company

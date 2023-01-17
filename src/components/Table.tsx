@@ -1,54 +1,16 @@
 import React from "react";
 import Company from "../models/Company";
-import { ColumnDef, createColumnHelper, flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-table";
+import { ColumnDef, flexRender, getCoreRowModel, getPaginationRowModel, useReactTable } from "@tanstack/react-table";
 import "./Table.css"
 
-/** 表に固定表示するデータ */
-const defaultCompanyData: Company[] = [
-  {
-    name: 'りんゆ株式会社',
-    corporateNumber: 1123456789012,
-    initialCapital: 1000,
-    foundedIn: 2022
-  },
-  {
-    name: '合同会社ミミズク',
-    corporateNumber: 2123456789012,
-    initialCapital: 20000,
-    foundedIn: 1988
-  },
-  {
-    name: '有限会社フクロウ',
-    corporateNumber: 3123456789012,
-    initialCapital: 100,
-    foundedIn: 1999
-  }
-]
 
-const columnHelper = createColumnHelper<Company>()
-
-/** カラム設定 */
-const columns: ColumnDef<Company, any>[] = [
-  columnHelper.accessor('corporateNumber', {
-    cell: info => info.getValue()
-  }),
-  columnHelper.accessor('name', {
-    cell: info => info.getValue()
-  }),
-  columnHelper.accessor('initialCapital', {
-    cell: info => info.getValue()
-  }),
-  columnHelper.accessor('foundedIn', {
-    cell: info => info.getValue()
-  })
-]
-
-function Table() {
-  const [data] = React.useState(() => [...defaultCompanyData])
+/** 表 */
+function Table({ data, columns }: { data: Company[], columns: ColumnDef<Company>[] }) {
   const table = useReactTable({
     data,
     columns,
-    getCoreRowModel: getCoreRowModel()
+    getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel()
   })
 
   return (
