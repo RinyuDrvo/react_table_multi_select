@@ -1,5 +1,53 @@
 # react table + react select(multi)を試すリポジトリ
 
+## 使用ライブラリ
+
+### TanStack Table
+#### URL
+https://tanstack.com/table/v8
+
+#### 実装機能
+- [ ] テーブル
+- [ ] ページネーション
+- [ ] ソート
+
+### React Select
+#### URL
+https://react-select.com/home
+
+#### 実装機能
+- コンボボックス
+  - [ ] 複数選択
+  - [ ] 選択肢検索
+
+### react modal
+#### URL
+https://github.com/reactjs/react-modal
+
+#### 実装機能
+- [ ] モーダル表示
+- [ ] ドラッグ&ドロップ配置
+- [ ] 実行とキャンセルボタンのイベント
+- [ ] モーダル領域外のグレーハッチと非操作化
+- [ ] 閉じるアイコン実装
+
+### react-dropzone
+
+#### URL
+https://react-dropzone.js.org/
+
+#### 機能
+- [ ] ファイルのドラッグ&ドロップ選択
+- [ ] ドラッグ&ドロップ領域へのボタン配置
+- [ ] ボタンによるファイル選択
+
+### React Testing Library
+
+#### URL
+https://testing-library.com/docs/react-testing-library/intro/
+
+#### 実装機能
+- [ ] テスト
 ## Available Scripts
 
 In the project directory, you can run:
